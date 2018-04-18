@@ -4,20 +4,47 @@
 
 ## API Reference
 
-<a name="differenceEuclideanRGB" href="differenceEuclideanRGB">#</a> d3.__differenceEuclideanRGB__ [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/euclidean.js "Source")
+<a name="differenceEuclideanRGB" href="differenceEuclideanRGB">#</a> d3.__differenceEuclideanRGB__(_a_, _b_) [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/euclidean.js "Source")
 
-<a name="differenceEuclideanLab" href="differenceEuclideanLab">#</a> d3.__differenceEuclideanLab__ [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/euclidean.js "Source")
+Computes the [Euclidean distance][euclidean] between the colors _a_ and _b_ in the RGB color space.
 
-<a name="differenceEuclideanHcl" href="differenceEuclideanHcl">#</a> d3.__differenceEuclideanHcl__ [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/euclidean.js "Source")
+<a name="differenceEuclideanLab" href="differenceEuclideanLab">#</a> d3.__differenceEuclideanLab__(_a_, _b_) [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/euclidean.js "Source")
 
-<a name="differenceEuclideanHsl" href="differenceEuclideanHsl">#</a> d3.__differenceEuclideanHsl__ [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/euclidean.js "Source")
+Computes the [Euclidean distance][euclidean] between the colors _a_ and _b_ in the Lab color space.
 
-<a name="differenceEuclideanCubehelix" href="differenceEuclideanCubehelix">#</a> d3.__differenceEuclideanCubehelix__ [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/euclidean.js "Source")
+<a name="differenceEuclideanHcl" href="differenceEuclideanHcl">#</a> d3.__differenceEuclideanHcl__(_a_, _b_) [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/euclidean.js "Source")
 
-<a name="differenceCie76" href="differenceCie76">#</a> d3.__differenceCie76__ [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/euclidean.js "Source")
+Computes the [Euclidean distance][euclidean] between the colors _a_ and _b_ in the HCL color space.
 
-<a name="differenceCie94" href="differenceCie94">#</a> d3.__differenceCie94__ [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/cie94.js "Source")
+<a name="differenceEuclideanHsl" href="differenceEuclideanHsl">#</a> d3.__differenceEuclideanHsl__(_a_, _b_) [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/euclidean.js "Source")
 
-<a name="differenceCiede2000" href="differenceCiede2000">#</a> d3.__differenceCiede2000__ [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/ciede2000.js "Source")
+Computes the [Euclidean distance][euclidean] between the colors _a_ and _b_ in the HSL color space.
 
-<a name="differenceCmc" href="differenceCmc">#</a> d3.__differenceCmc__ [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/cmc.js "Source")
+<a name="differenceEuclideanCubehelix" href="differenceEuclideanCubehelix">#</a> d3.__differenceEuclideanCubehelix__(_a_, _b_) [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/euclidean.js "Source")
+
+Computes the [Euclidean distance][euclidean] between the colors _a_ and _b_ in the Cubehelix color space.
+
+<a name="differenceCie76" href="differenceCie76">#</a> d3.__differenceCie76__(_a_, _b_) [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/euclidean.js "Source")
+
+Computes the [CIE76][CIE76] ΔE\*<sub>ab</sub> color difference between the colors _a_ and _b_. The computation is done in the Lab color space and it is analogous to [differenceEuclideanLab](#differenceEuclideanLab).
+
+<a name="differenceCie94" href="differenceCie94">#</a> d3.__differenceCie94__(_a_, _b_) [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/cie94.js "Source")
+
+Computes the [CIE94][CIE94] ΔE\*<sub>94</sub> color difference between the colors _a_ and _b_. The computation is done in the Lab color space.
+
+<a name="differenceCiede2000" href="differenceCiede2000">#</a> d3.__differenceCiede2000__(_a_, _b_) [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/ciede2000.js "Source")
+
+Computes the [CIEDE2000][CIEDE2000] ΔE\*<sub>00</sub> color difference between the colors _a_ and _b_. The computation is done in the Lab color space.
+
+<a name="differenceCmc" href="differenceCmc">#</a> d3.__differenceCmc__(_a_, _b_) [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/cmc.js "Source")
+
+Computes the [CMC l:c (1984)][CMC] ΔE\*<sub>CMC</sub> color difference between the colors _a_ and _b_. The computation is done in the Lab color space. 
+
+Since it's not symmetrical (in other words, the distance from _a_ to _b_ is not always equal to the distance from _b_ to _a_), ΔE\*<sub>CMC</sub> is not a metric.
+
+[color-diff]: https://en.wikipedia.org/wiki/Color_difference
+[euclidean]: https://en.wikipedia.org/wiki/Color_difference#Euclidean
+[CIE76]: https://en.wikipedia.org/wiki/Color_difference#CIE76
+[CIE94]: https://en.wikipedia.org/wiki/Color_difference#CIE94
+[CIEDE2000]: https://en.wikipedia.org/wiki/Color_difference#CIEDE2000
+[CMC]: https://en.wikipedia.org/wiki/Color_difference#CMC_l:c_(1984)

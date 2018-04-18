@@ -44,4 +44,4 @@ function differenceCmc(l, c) {
 	};
 }
 
-export default differenceCmc;
+export default differenceCmc();

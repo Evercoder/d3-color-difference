@@ -110,4 +110,4 @@ function differenceCiede2000(Kl, Kc, Kh) {
 	};
 }
 
-export default differenceCiede2000;
+export default differenceCiede2000();

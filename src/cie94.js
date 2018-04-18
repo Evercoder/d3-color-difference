@@ -33,4 +33,4 @@ function differenceCie94(kL, K1, K2) {
 	}
 }
 
-export default differenceCie94;
+export default differenceCie94();
