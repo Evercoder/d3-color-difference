@@ -6,7 +6,7 @@ function euclidean(ca1, ca2, ca3, cb1, cb2, cb3) {
 
 function differenceEuclideanRGB(std, smp) {
 	std = rgb(std); smp = rgb(smp);
-	return euclidean(std.r, std.g, std.b, smp.r, smp.b, smp.g);
+	return euclidean(std.r, std.g, std.b, smp.r, smp.g, smp.b);
 }
 
 function differenceEuclideanLab(std, smp) {
