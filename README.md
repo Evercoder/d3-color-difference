@@ -34,13 +34,13 @@ Computes the [CIE94][CIE94] ΔE\*<sub>94</sub> color difference between the colo
 
 <a name="differenceCiede2000" href="differenceCiede2000">#</a> d3.__differenceCiede2000__(_a_, _b_) [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/ciede2000.js "Source")
 
-Computes the [CIEDE2000][CIEDE2000] ΔE\*<sub>00</sub> color difference between the colors _a_ and _b_. The computation is done in the Lab color space.
+Computes the [CIEDE2000][CIEDE2000] ΔE\*<sub>00</sub> color difference between the colors _a_ and _b_, based on the [Sharma implementation](http://www2.ece.rochester.edu/~gsharma/ciede2000/). The computation is done in the Lab color space.
 
 <a name="differenceCmc" href="differenceCmc">#</a> d3.__differenceCmc__(_a_, _b_) [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/cmc.js "Source")
 
 Computes the [CMC l:c (1984)][CMC] ΔE\*<sub>CMC</sub> color difference between the colors _a_ and _b_. The computation is done in the Lab color space. 
 
-Since it's not symmetrical (in other words, the distance from _a_ to _b_ is not always equal to the distance from _b_ to _a_), ΔE\*<sub>CMC</sub> is not a metric.
+_Note:_ ΔE\*<sub>CMC</sub> is not considered a metric since it's not symmetrical, i.e. the distance from _a_ to _b_ is not always equal to the distance from _b_ to _a_.
 
 [color-diff]: https://en.wikipedia.org/wiki/Color_difference
 [euclidean]: https://en.wikipedia.org/wiki/Color_difference#Euclidean
