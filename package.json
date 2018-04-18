@@ -1,6 +1,6 @@
 {
   "name": "d3-color-difference",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "dist/d3-color-difference.js",
   "module": "index",
   "jsnext:main": "index",
