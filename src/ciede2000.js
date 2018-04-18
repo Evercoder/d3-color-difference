@@ -1,3 +1,5 @@
+import { lab } from 'd3-color';
+
 /*
 	The CIEDE2000 color difference
 	--------------------------------------------------
@@ -24,7 +26,7 @@
 	Ported to JavaScript by Dan Burzo for the Culori library.
  */
 
-export default differenceCiede2000 = function(Kl, Kc, Kh) {
+function differenceCiede2000(Kl, Kc, Kh) {
 
 	Kl = Kl !== undefined ? Kl : 1;
 	Kc = Kc !== undefined ? Kc : 1;
@@ -106,4 +108,6 @@ export default differenceCiede2000 = function(Kl, Kc, Kh) {
 			Rt * dC / (Kc * Sc) * dH / (Kh * Sh)
 		);
 	};
-};
+}
+
+export default differenceCiede2000;

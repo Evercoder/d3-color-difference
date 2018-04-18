@@ -1,10 +1,12 @@
-export default differenceCie94 = function(kL, K1, K2) {
+import { lab } from 'd3-color';
+
+function differenceCie94(kL, K1, K2) {
 
 	kL = kL !== undefined ? kL : 1;
 	K1 = K1 !== undefined ? K1 : 0.045;
 	K2 = K2 !== undefined ? K2 : 0.015;
 
-	function(std, smp) {
+	return function(std, smp) {
 		var LabStd = lab(std);
 		var LabSmp = lab(smp);
 
@@ -30,3 +32,5 @@ export default differenceCie94 = function(kL, K1, K2) {
 		);
 	}
 }
+
+export default differenceCie94;

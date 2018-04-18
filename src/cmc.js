@@ -1,4 +1,6 @@
-export default differenceCmc = function(l, c) {
+import { lab } from 'd3-color';
+
+function differenceCmc(l, c) {
 
 	l = l !== undefined ? l : 1;
 	c = c !== undefined ? c : 1;
@@ -41,3 +43,5 @@ export default differenceCmc = function(l, c) {
 		);
 	};
 }
+
+export default differenceCmc;
