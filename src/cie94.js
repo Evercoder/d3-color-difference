@@ -1,25 +1,27 @@
-const differenceCie94 = (kL = 1, K1 = 0.045, K2 = 0.015) => {
-	let lab = converter('lab');
-	
-	return (std, smp) => {
+export default differenceCie94 = function(kL, K1, K2) {
 
-		let LabStd = lab(std);
-		let LabSmp = lab(smp);
+	kL = kL !== undefined ? kL : 1;
+	K1 = K1 !== undefined ? K1 : 0.045;
+	K2 = K2 !== undefined ? K2 : 0.015;
+
+	function(std, smp) {
+		var LabStd = lab(std);
+		var LabSmp = lab(smp);
 
 		// Extract Lab values, and compute Chroma
-		let lStd = LabStd.l;
-		let aStd = LabStd.a;
-		let bStd = LabStd.b;
-		let cStd = Math.sqrt(aStd * aStd + bStd * bStd);
+		var lStd = LabStd.l;
+		var aStd = LabStd.a;
+		var bStd = LabStd.b;
+		var cStd = Math.sqrt(aStd * aStd + bStd * bStd);
 
-		let lSmp = LabSmp.l;
-		let aSmp = LabSmp.a;
-		let bSmp = LabSmp.b;
-		let cSmp = Math.sqrt(aSmp * aSmp + bSmp * bSmp);
+		var lSmp = LabSmp.l;
+		var aSmp = LabSmp.a;
+		var bSmp = LabSmp.b;
+		var cSmp = Math.sqrt(aSmp * aSmp + bSmp * bSmp);
 
-		let dL2 = Math.pow(lStd - lSmp, 2);
-		let dC2 = Math.pow(cStd - cSmp, 2);
-		let dH2 = Math.pow(aStd - aSmp, 2) + Math.pow(bStd - bSmp, 2) - dC2;
+		var dL2 = Math.pow(lStd - lSmp, 2);
+		var dC2 = Math.pow(cStd - cSmp, 2);
+		var dH2 = Math.pow(aStd - aSmp, 2) + Math.pow(bStd - bSmp, 2) - dC2;
 
 		return Math.sqrt(
 			dL2 / Math.pow(kL, 2) + 
