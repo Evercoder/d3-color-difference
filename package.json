@@ -5,8 +5,11 @@
   "module": "index",
   "jsnext:main": "index",
   "repository": "git@github.com:danburzo/d3-color-difference.git",
-  "author": "Dan Burzo <danburzo@gmail.com>",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
+  "author": {
+      "name": "Dan Burzo",
+      "url": "http://danburzo.ro"
+  },
   "devDependencies": {
     "eslint": "^4.19.1",
     "package-preamble": "^0.1.0",
