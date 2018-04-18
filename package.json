@@ -1,7 +1,7 @@
 {
   "name": "d3-color-difference",
   "version": "0.1.0",
-  "main": "dist/d3-color-difference.js",
+  "main": "build/d3-color-difference.js",
   "module": "index",
   "jsnext:main": "index",
   "repository": "git@github.com:danburzo/d3-color-difference.git",

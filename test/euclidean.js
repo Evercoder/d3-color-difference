@@ -1,2 +1,0 @@
-var tape = require('tape');
-
