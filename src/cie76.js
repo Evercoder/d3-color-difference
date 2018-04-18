@@ -1,0 +1,1 @@
+const differenceCie76 = () => differenceEuclidean('lab');
