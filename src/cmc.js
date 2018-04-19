@@ -44,4 +44,7 @@ function differenceCmc(l, c) {
 	};
 }
 
-export default differenceCmc();
+export {
+	differenceCmc() as default,
+	differenceCmc as differenceCmcWeighted
+}

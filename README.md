@@ -4,6 +4,8 @@
 
 ## API Reference
 
+### Euclidean Distances
+
 <a name="differenceEuclideanRGB" href="differenceEuclideanRGB">#</a> d3.__differenceEuclideanRGB__(_a_, _b_) [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/euclidean.js "Source")
 
 Computes the [Euclidean distance][euclidean] between the colors _a_ and _b_ in the [RGB][RGB] color space.
@@ -24,23 +26,43 @@ Computes the [Euclidean distance][euclidean] between the colors _a_ and _b_ in t
 
 Computes the [Euclidean distance][euclidean] between the colors _a_ and _b_ in the [Cubehelix][Cubehelix] color space.
 
+### CIE Delta-E 
+
 <a name="differenceCie76" href="differenceCie76">#</a> d3.__differenceCie76__(_a_, _b_) [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/euclidean.js "Source")
 
 Computes the [CIE76][CIE76] ΔE\*<sub>ab</sub> color difference between the colors _a_ and _b_. The computation is done in the [Lab][Lab] color space and it is analogous to [differenceEuclideanLab](#differenceEuclideanLab).
 
 <a name="differenceCie94" href="differenceCie94">#</a> d3.__differenceCie94__(_a_, _b_) [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/cie94.js "Source")
 
-Computes the [CIE94][CIE94] ΔE\*<sub>94</sub> color difference between the colors _a_ and _b_. The computation is done in the [Lab][Lab] color space.
+Computes the [CIE94][CIE94] ΔE\*<sub>94</sub> color difference between the colors _a_ and _b_. The computation is done in the [Lab][Lab] color space, with the default weights _kL = 1_, _K1 = 0.045_, and _K2 = 0.015_.
+
+<a name="differenceCie94Weighted" href="differenceCie94Weighted">#</a> d3.__differenceCie94Weighted__(_kL_, _K1_, _K2_) [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/cie94.js "Source")
+
+Returns a [CIE94][CIE94] difference function with custom weighting parameters.
 
 <a name="differenceCiede2000" href="differenceCiede2000">#</a> d3.__differenceCiede2000__(_a_, _b_) [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/ciede2000.js "Source")
 
-Computes the [CIEDE2000][CIEDE2000] ΔE\*<sub>00</sub> color difference between the colors _a_ and _b_ as implemented by [G. Sharma](http://www2.ece.rochester.edu/~gsharma/ciede2000/). The computation is done in the [Lab][Lab] color space.
+Computes the [CIEDE2000][CIEDE2000] ΔE\*<sub>00</sub> color difference between the colors _a_ and _b_ as implemented by [G. Sharma](http://www2.ece.rochester.edu/~gsharma/ciede2000/). The computation is done in the [Lab][Lab] color space, with the default weights _kL = kC = kH = 1_.
+
+<a name="differenceCiede2000Weighted" href="differenceCiede2000Weighted">#</a> d3.__differenceCiede2000Weighted__(_kL_, _kC_, _kH_) [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/ciede2000.js "Source")
+
+Returns a [CIEDE2000][CIEDE2000] difference function with custom weighting parameters.
 
 <a name="differenceCmc" href="differenceCmc">#</a> d3.__differenceCmc__(_a_, _b_) [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/cmc.js "Source")
 
-Computes the [CMC l:c (1984)][CMC] ΔE\*<sub>CMC</sub> color difference between the colors _a_ and _b_. The computation is done in the [Lab][Lab] color space. 
+Computes the [CMC l:c (1984)][CMC] ΔE\*<sub>CMC</sub> color difference between the colors _a_ and _b_. The computation is done in the [Lab][Lab] color space with the default weights _l = c = 1_.
 
 _Note:_ ΔE\*<sub>CMC</sub> is not considered a metric since it's not symmetrical, i.e. the distance from _a_ to _b_ is not always equal to the distance from _b_ to _a_.
+
+<a name="differenceCmcWeighted" href="differenceCmcWeighted">#</a> d3.__differenceCmcWeighted__(_l_, _c_) [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/cmc.js "Source")
+
+Returns a [CMC l:c (1984)][CMC] difference function with custom weighting parameters.
+
+### Opacity
+
+<a name="differenceWithOpacity" href="differenceWithOpacity">#</a> d3.__differenceWithOpacity__(_differenceFunction_, _a_, _b_) [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/withOpacity.js "Source")
+
+The difference functions don't take the colors' alpha channel into account when computing distances. This method allows you to factor the colors' opacities into the distance.
 
 [color-diff]: https://en.wikipedia.org/wiki/Color_difference
 [euclidean]: https://en.wikipedia.org/wiki/Color_difference#Euclidean

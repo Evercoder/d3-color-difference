@@ -7,11 +7,11 @@ import { lab } from 'd3-color';
 	http://www2.ece.rochester.edu/~gsharma/ciede2000/
  */
 
-function differenceCiede2000(Kl, Kc, Kh) {
+function differenceCiede2000(kL, kC, kH) {
 
-	Kl = Kl !== undefined ? Kl : 1;
-	Kc = Kc !== undefined ? Kc : 1;
-	Kh = Kh !== undefined ? Kh : 1;
+	kL = kL !== undefined ? kL : 1;
+	kC = kC !== undefined ? kC : 1;
+	kH = kH !== undefined ? kH : 1;
 
 	return function(std, smp) {
 		var LabStd = lab(std);
@@ -83,12 +83,15 @@ function differenceCiede2000(Kl, Kc, Kh) {
 		var Rt = -1 * Math.sin(2 * deltaTheta) * Rc;
 
 		return Math.sqrt(
-			Math.pow(dL / (Kl * Sl), 2) + 
-			Math.pow(dC / (Kc * Sc), 2) + 
-			Math.pow(dH / (Kh * Sh), 2) + 
-			Rt * dC / (Kc * Sc) * dH / (Kh * Sh)
+			Math.pow(dL / (kL * Sl), 2) + 
+			Math.pow(dC / (kC * Sc), 2) + 
+			Math.pow(dH / (kH * Sh), 2) + 
+			Rt * dC / (kC * Sc) * dH / (kH * Sh)
 		);
 	};
 }
 
-export default differenceCiede2000();
+export {
+	differenceCiede2000() as default,
+	differenceCiede2000 as differenceCiede2000Weighted
+};

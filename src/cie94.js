@@ -33,4 +33,7 @@ function differenceCie94(kL, K1, K2) {
 	}
 }
 
-export default differenceCie94();
+export {
+	differenceCie94() as default,
+	differenceCie94 as differenceCie94Weighted
+}
