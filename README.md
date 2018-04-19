@@ -1,6 +1,12 @@
 # d3-color-difference
 
+See this [Observable notebook](https://beta.observablehq.com/@danburzo/color-difference-formulas-with-d3-color-difference).
+
 ## Installing
+
+```bash
+$ npm install d3-color-difference
+```
 
 ## API Reference
 
