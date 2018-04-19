@@ -6,6 +6,7 @@
   "jsnext:main": "index",
   "repository": "git@github.com:danburzo/d3-color-difference.git",
   "license": "BSD-3-Clause",
+  "homepage": "https://github.com/danburzo/d3-color-difference",
   "author": {
       "name": "Dan Burzo",
       "url": "http://danburzo.ro"
@@ -23,7 +24,6 @@
   "scripts": {
     "pretest": "rm -rf build && mkdir build && rollup -c --banner \"$(preamble)\"",
     "test": "tape 'test/**/*-test.js' && eslint index.js src test",
-    "prepublish": "npm run test && uglifyjs --preamble \"$(preamble)\" build/d3-color-difference.js -c -m -o build/d3-color-difference.min.js",
-    "postpublish": "git push && git push --tags && cd ../d3.github.com && cp ../d3-color-difference/build/d3-color-difference.js d3-color-difference.v1.js && cp ../d3-color-difference/build/d3-color-difference.min.js d3-color-difference.v1.min.js && git add d3-color-difference.v1.js d3-color-difference.v1.min.js && git commit -m \"d3-color-difference ${npm_package_version}\" && git push && cd - && zip -j build/d3-color-difference.zip -- LICENSE README.md build/d3-color-difference.js build/d3-color-difference.min.js"
+    "prepublish": "npm run test && uglifyjs --preamble \"$(preamble)\" build/d3-color-difference.js -c -m -o build/d3-color-difference.min.js"
   }
 }

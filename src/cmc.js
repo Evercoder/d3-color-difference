@@ -44,7 +44,9 @@ function differenceCmc(l, c) {
 	};
 }
 
+var differenceCmcDefault = differenceCmc();
+
 export {
-	differenceCmc() as default,
+	differenceCmcDefault as default,
 	differenceCmc as differenceCmcWeighted
 }

@@ -91,7 +91,9 @@ function differenceCiede2000(kL, kC, kH) {
 	};
 }
 
+var differenceCiede2000Default = differenceCiede2000();
+
 export {
-	differenceCiede2000() as default,
+	differenceCiede2000Default as default,
 	differenceCiede2000 as differenceCiede2000Weighted
 };
