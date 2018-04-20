@@ -1,5 +1,7 @@
 # d3-color-difference
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/danburzo/d3-color-difference.svg)](https://greenkeeper.io/)
+
 See this [Observable notebook](https://beta.observablehq.com/@danburzo/color-difference-formulas-with-d3-color-difference) for a demonstration.
 
 ## Installing
