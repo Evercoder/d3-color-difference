@@ -30,6 +30,7 @@ function differenceEuclideanCubehelix(std, smp) {
 }
 
 export {
+	euclidean,
 	differenceEuclideanRGB,
 	differenceEuclideanLab,
 	differenceEuclideanHcl,

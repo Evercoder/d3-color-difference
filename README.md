@@ -1,6 +1,6 @@
 # d3-color-difference
 
-See this [Observable notebook](https://beta.observablehq.com/@danburzo/color-difference-formulas-with-d3-color-difference).
+See this [Observable notebook](https://beta.observablehq.com/@danburzo/color-difference-formulas-with-d3-color-difference) for a demonstration.
 
 ## Installing
 
@@ -64,6 +64,14 @@ _Note:_ ΔE\*<sub>CMC</sub> is not considered a metric since it's not symmetrica
 
 Returns a [CMC l:c (1984)][CMC] difference function with custom weighting parameters.
 
+<a name="differenceDin99o" href="#differenceDin99o">#</a> d3.__differenceDin99o__(_a_, _b_) [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/din99o.js "Source")
+
+Computes the [DIN99o][DIN99oDE] ΔE\*<sub>99o</sub> color difference between the colors _a_ and _b_. The computation is done in the [DIN99o][DIN99o] color space with the default weights _kCH = kE = 1_.
+
+<a name="differenceDin99oWeighted" href="#differenceDin99oWeighted">#</a> d3.__differenceDin99oWeighted__(_kCH_, _kE_) [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/din99o.js "Source")
+
+Returns a [DIN99o][DIN99oDE] difference function with custom weighting parameters.
+
 ### Opacity
 
 <a name="differenceWithOpacity" href="#differenceWithOpacity">#</a> d3.__differenceWithOpacity__(_differenceFunction_, _a_, _b_) [<>](https://github.com/danburzo/d3-color-difference/blob/master/src/withOpacity.js "Source")
@@ -76,6 +84,8 @@ The difference functions don't take the colors' alpha channel into account when 
 [CIE94]: https://en.wikipedia.org/wiki/Color_difference#CIE94
 [CIEDE2000]: https://en.wikipedia.org/wiki/Color_difference#CIEDE2000
 [CMC]: https://en.wikipedia.org/wiki/Color_difference#CMC_l:c_(1984)
+[DIN99o]: https://de.wikipedia.org/wiki/DIN99-Farbraum
+[DIN99oDE]: https://de.wikipedia.org/wiki/DIN99-Farbraum#Farbabstandsformel
 [RGB]: https://github.com/d3/d3-color#rgb
 [HSL]: https://github.com/d3/d3-color#hsl
 [Lab]: https://github.com/d3/d3-color#lab
